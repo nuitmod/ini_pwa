@@ -22,24 +22,39 @@
         <meta name="fragment" content="!">
         <link rel=icon sizes=192x192 href="assets/logo-192.png">
         <meta name="theme-color" content="#0099ff" />
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <title>ini_pwa</title>
         <link rel="manifest" href="manifest.json">
+        <link rel="canonical" href="$SOME_URL">
         <style>
             :root{
                 --theme:#0099ff;
             }
             a{text-decoration:none;color:var(--theme)}
         </style>
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
     </head>
     <body>
 
-    <div class="">
-      <h5>ini pwa</h5>
-    </div>
-    <div class="">
-        <img src="./img/mode.jpg" alt="" height="229" width="129">
-    </div>
+    <template id="temp-shadow">
+      <div class="">
+        <h5>ini pwa</h5>
+      </div>
+      <div class="">
+          <img src="./img/mode.jpg" alt="" height="229" width="129">
+      </div>
+    </template>
 
+    <section>
+      <div class="amp-text">
+        <div class="">
+          <h5>ini pwa amp</h5>
+        </div>
+        <div class="">
+          <amp-img src="./img/mode.jpg" alt="" height="229" width="129"></amp-img>
+        </div>
+      </div>
+    </section>
 
     <script>
 
