@@ -1,3 +1,5 @@
+import { composeWithDevTools } from 'redux-devtools-extension';
+
 var reducer = Redux.combineReducers({
   todos: (state = [], action) => {
     var newState = Object.assign([], state);
@@ -11,7 +13,10 @@ var reducer = Redux.combineReducers({
   }
 });
 
-var store = Redux.createStore(reducer);
+var store = Redux.createStore(reducer, /* preloadedState, */ composeEnhancers(
+  applyMiddleware(...middleware),
+  // other store enhancers if any
+));
 var input_field=document.getElementById('todo')
 
 var render = () => {

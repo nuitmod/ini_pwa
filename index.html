@@ -28,6 +28,8 @@
         <link rel="canonical" href="$SOME_URL">
         <link rel="apple-touch-icon" href="/img/icons/icon-96x96.png">
         <meta name="apple-mobile-web-app-status-bar" content="#FFE1C4">
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/riot/4.6.6/riot+compiler.min.js'></script>
         <style>
             :root{
                 --theme:#0099ff;
@@ -53,21 +55,38 @@
           <h5>ini pwa amp</h5>
         </div>
         <div class="">
-          <amp-img src="./img/mode.jpg" alt="" height="229" width="129"></amp-img>
+          <amp-img src="./img/mode.jpg" alt="" height="209" width="109"></amp-img>
         </div>
       </div>
     </section>
     <section>
       <h5>rdx do store data</h5>
       <input id="todo" type="text">
-      <button id="submit-todo">submit</button>
+      <button id="submit-todo">add data</button>
+      <input id='add-local' type="button" name="" value="add to local">
+      <input id='clear-local'type="button" name="" value="clear local">
       <div id="container"></div>
-      <script src='https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.min.js'></script>
+      <br>
+    </section>
+    <section>
+      <div id="local-test">
+        <h5>local test</h5>
+        <form>
+          <input id="item" type="text" placeholder="New">
+        </form>
+        
+        <h5>Items</h5>
+        <ul></ul>
+          <input id='clear-all' type="button" name="" value="clear all">
+
+      </div>
     </section>
 
-    <script>
-    </script>
+
+
+
     <script src='./app.js'></script>
-    <script src='./rdx.js'></script>
+    <script type="module" src='./local.js'></script>
+    <script type="module" src='./rdx.js'></script>
     </body>
 </html>
