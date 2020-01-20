@@ -1,6 +1,6 @@
-const reducer = Redux.combineReducers({
+var reducer = Redux.combineReducers({
   todos: (state = [], action) => {
-    const newState = Object.assign([], state);
+    var newState = Object.assign([], state);
     if (action.type == 'add') {
       newState.push(action.item);
     }
@@ -11,14 +11,16 @@ const reducer = Redux.combineReducers({
   }
 });
 
-const store = Redux.createStore(reducer);
+var store = Redux.createStore(reducer);
+var input_field=document.getElementById('todo')
 
-const render = () => {
-  const container = document.getElementById('container');
+var render = () => {
+  var container = document.getElementById('container');
   container.innerHTML = '';
-  const state = store.getState();
+  input_field.value='';
+  var state = store.getState();
   state.todos.forEach((todo, i) => {
-    const e = document.createElement('div');
+    var e = document.createElement('div');
     e.innerHTML = todo;
     container.appendChild(e);
     e.onclick = () => {
@@ -34,7 +36,7 @@ const render = () => {
 document.getElementById('submit-todo').onclick = () => {
   store.dispatch({
     type: 'add',
-    item: document.getElementById('todo').value
+    item: input_field.value
   });
   render();
 };
