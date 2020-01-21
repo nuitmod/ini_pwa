@@ -1,4 +1,4 @@
-console.log("app.js include");
+//console.log("app.js include");
 
 // ServiceWorker Registration
 if('serviceWorker' in navigator) {

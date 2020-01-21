@@ -14,10 +14,14 @@ var reducer = Redux.combineReducers({
 });
 
 var store = Redux.createStore(reducer);
-  //, /* preloadedState, */ composeEnhancers(
-  //applyMiddleware(...middleware),
-  // other store enhancers if any
-//));
+/*
+var store = Redux.createStore(reducer
+  , /* preloadedState,  composeEnhancers(
+  applyMiddleware(...middleware),
+   other store enhancers if any
+));
+*/
+
 var input_field=document.getElementById('todo')
 
 var render = () => {

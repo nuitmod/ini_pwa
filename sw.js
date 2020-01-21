@@ -5,6 +5,7 @@ var urlsToCache = [
     'index.html',
     'assets/logo-192.png',
     'img/mode.jpg',
+    'css/style.css',
     'app.js',
     'rdx.js',
     'local.js'
