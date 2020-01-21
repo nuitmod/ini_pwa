@@ -2,13 +2,13 @@
 var static_cash_name='site-static';
 // Put all your urls that you want to cache in this array
 var urlsToCache = [
-    './index.html',
-    './assets/logo-192.png',
-    './img/mode.jpg',
-    './css/style.css',
-    './app.js',
-    './rdx.js',
-    './local.js'
+    'index.html',
+    'assets/logo-192.png',
+    'img/mode.jpg',
+    'css/style.css',
+    'app.js',
+    'rdx.js',
+    'local.js'
 ];
 
 // Install the service worker and open the cache and add files mentioned in array to cache
