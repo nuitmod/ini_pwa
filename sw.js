@@ -1,17 +1,18 @@
-var CACHE_NAME = 'version-1'; // bump this version when you make changes.
+//var CACHE_NAME = 'version-1'; // bump this version when you make changes.
 var static_cash_name='site-static';
 // Put all your urls that you want to cache in this array
 var urlsToCache = [
-    'index.html',
-    'assets/logo-192.png',
-    'img/mode.jpg',
-    'css/style.css',
-    'app.js',
-    'rdx.js',
-    'local.js'
+    './index.html',
+    './assets/logo-192.png',
+    './img/mode.jpg',
+    './css/style.css',
+    './app.js',
+    './rdx.js',
+    './local.js'
 ];
 
 // Install the service worker and open the cache and add files mentioned in array to cache
+/*
 self.addEventListener('install', function(event) {
     event.waitUntil(
     caches.open(static_cash_name).then(function(cache) {
@@ -20,6 +21,13 @@ self.addEventListener('install', function(event) {
         })
     );
 });
+*/
+self.addEventListener('install', async evt => {
+  var cache = await caches.open(static_cash_name);
+  await cache.addAll(urlsToCache);
+  return self.skipWaiting();
+})
+
 
 
 // keep fetching the requests from the user
