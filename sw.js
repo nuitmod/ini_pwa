@@ -12,7 +12,7 @@ var urlsToCache = [
 ];
 
 // Install the service worker and open the cache and add files mentioned in array to cache
-
+/*
 self.addEventListener('install', function(event) {
     event.waitUntil(
     caches.open(static_cash_name).then(function(cache) {
@@ -21,13 +21,13 @@ self.addEventListener('install', function(event) {
         })
     );
 });
-/*
+*/
 self.addEventListener('install', async evt => {
   var cache = await caches.open(static_cash_name);
   await cache.addAll(urlsToCache);
   return self.skipWaiting();
 })
-*/
+
 
 
 // keep fetching the requests from the user
