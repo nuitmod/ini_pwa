@@ -5,6 +5,8 @@ var urlsToCache = [
     './index.html',
     './assets/logo-192.png',
     './img/mode.jpg',
+    './tag/my-test.riot',
+    './tag/todo.riot',
     './css/style.css',
     './app.js',
     './rdx.js',
