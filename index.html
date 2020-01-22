@@ -28,12 +28,10 @@
         <link rel="canonical" href="$SOME_URL">
         <link rel="apple-touch-icon" href="/img/icons/icon-96x96.png">
         <meta name="apple-mobile-web-app-status-bar" content="#FFE1C4">
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.min.js'></script>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/riot/4.6.6/riot+compiler.min.js'></script>
-        <template id="">
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js'></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        </template>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/4.6.6/riot+compiler.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/4.6.6/riot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/riot@4/riot+compiler.min.js"></script>
         <link rel="stylesheet" href="./css/style.css">
         <script
         src="https://code.jquery.com/jquery-3.4.1.js"
@@ -128,22 +126,52 @@
         <h5>Items</h5>
         <ul id="ul-id"></ul>
           <input id='clear-all' type="button" name="" value="clear all">
-
       </div>
     </section>
-
+    <section>
+      <todo></todo>
+      <my-test></my-test>
+    </section>
+    <script src="./tag/todo.riot" type="riot"></script>
+    <script src="./tag/my-test.riot" type="riot"></script>
 
     <script>
     $('.mobile-tab').hide();
-
-
-      $('#burg').on('click', function(){
+    $('#burg').on('click', function(){
       $('.mobile-tab').slideToggle(600)
     });
+
+    riot.compile().then(() => {
+      riot.mount('my-test');
+      //riot.mount('todo');
+    })
+
+
+/*
+  (async function(){
+     riot.compile()
+     await riot.mount('my-test')
+     return self.skipWaiting();
+})()
+
+/*
+    riot.compile().then(() => {
+       riot.mount('todo', {
+         title: 'I want to behave!',
+         items: [
+           { title: 'Avoid excessive caffeine', done: true },
+           { title: 'Hidden item',  hidden: true },
+           { title: 'Be less provocative'  },
+           { title: 'Be nice to people' }
+         ]
+       })
+     })
+*/
       </script>
 
     <script src='./app.js'></script>
     <script src='./rdx.js'></script>
     <script src='./local.js'></script>
+    <script src='./tag/ri.js'></script>
     </body>
 </html>

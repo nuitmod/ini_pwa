@@ -13,7 +13,21 @@ var reducer = Redux.combineReducers({
   }
 });
 
-var store = Redux.createStore(reducer);
+var key_store="__key_rdx__";
+var local = localStorage;
+
+function save_state(st){
+  local.setItem(key_store, JSON.stringify(st))
+}
+
+function load_state(){
+  var json = local.getItem(key_store);
+  var res = json ? JSON.parse(json) : undefined;
+  //console.log(res);
+  return res;
+}
+
+var store = Redux.createStore(reducer, load_state());
 /*
 var store = Redux.createStore(reducer
   , /* preloadedState,  composeEnhancers(
@@ -50,3 +64,7 @@ document.getElementById('submit-todo').onclick = () => {
   });
   render();
 };
+
+store.subscribe(()=>{
+  save_state(store.getState());
+})
