@@ -32,6 +32,11 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/4.6.6/riot+compiler.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/4.6.6/riot.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/riot@4/riot+compiler.min.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/preact/8.5.2/preact.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/preact/8.5.2/preact.min.js.map'></script>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-title" content="Ionic App" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <link rel="stylesheet" href="./css/style.css">
         <script
         src="https://code.jquery.com/jquery-3.4.1.js"
@@ -129,11 +134,15 @@
       </div>
     </section>
     <section>
-      <todo></todo>
-      <my-test></my-test>
+      <rii></rii>
+      <main></main>
     </section>
-    <script src="./tag/todo.riot" type="riot"></script>
-    <script src="./tag/my-test.riot" type="riot"></script>
+
+    <div id="root"></div>
+
+
+    <script src="./tag/main.html" type="riot"></script>
+    <script src="./tag/rii.html" type="riot"></script>
 
     <script>
     $('.mobile-tab').hide();
@@ -141,17 +150,22 @@
       $('.mobile-tab').slideToggle(600)
     });
 
+
+//riot.mount('*')
+
+/*
     riot.compile().then(() => {
-      riot.mount('my-test');
+      riot.mount('my-test','todo');
       //riot.mount('todo');
     })
 
+*/
 
-/*
-  (async function(){
-     riot.compile()
-     await riot.mount('my-test')
-     return self.skipWaiting();
+(async function(){
+  await riot.compile()
+    riot.mount('main')
+    riot.mount('rii')
+  //riot.mount('*')
 })()
 
 /*
