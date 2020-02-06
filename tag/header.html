@@ -1,0 +1,37 @@
+<header>
+  <link rel="stylesheet" href="../css/style.css">
+    <div class="bar">
+    <nav id="desktop">
+      <ul>
+        <li><a href="main">main</a></li>
+        <li><a href="void">void</a></li>
+        <li><a href="rend">rend</a></li>
+        <li><a href="https://yoox.com">yoox.com</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div id="burg">
+    <a href="#">
+      <span class="bar" id="top"></span>
+      <span class="bar" id="middle"></span>
+      <span class="bar" id="bottom"></span>
+    </a>
+  </div>
+  <div class="mobile-tab">
+    <nav id="mobile">
+      <ul>
+        <li><a href="main">main</a></li>
+        <li><a href="void">void</a></li>
+        <li><a href="rend">rend</a></li>
+        <li><a href="https://yoox.com">yoox.com</a></li>
+      </ul>
+    </nav>
+  </div>
+  <script>
+    var mb_tab=document.getElementsByClassName('.mobile-tab');
+    var burg = document.getElementById('#burg');
+    burg.addEventListener('click', function(){
+      mb_tab.slideToggle(600);
+    })
+  </script>
+</header>

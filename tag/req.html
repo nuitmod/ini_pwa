@@ -1,0 +1,41 @@
+<req>
+  <h6>request tag</h6>
+  <form>
+   <input id="dat" type="text" name="data" value="" placeholder="data">
+   <input id="btn-ax" type="button" name="" value="post axios">
+  </form>
+<br>
+<div id="out"><h5>axios output</h5></div>
+
+
+<script>
+
+var data_post={ dat: 'data axios' }
+var btn = document.getElementById('btn-ax');
+console.log(btn);
+
+async function post_data(){
+  var pld = await axios({
+    method: 'post',
+        url: "http://127.0.0.1:5000/req",
+        headers:{
+          "accept": "application/octet-stream",
+          "User-Agent": "Chrome/64.0.3282.140",
+          'Content-type': 'application/json',
+          "Access-Control-Allow-Origin": "*",
+          'Access-Control-Allow-Methods':'GET, POST, PATCH, PUT, DELETE, OPTIONS',
+          'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token'
+        },
+        data: data_post
+
+
+  })
+
+}
+
+//btn.addEventListener('click', function(e){
+  //post_data();
+//})
+
+</script>
+</req>

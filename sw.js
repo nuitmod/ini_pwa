@@ -7,10 +7,12 @@ var urlsToCache = [
     './img/mode.jpg',
     './img/mod2.jpg',
     './img/code.jpg',
-    './tag/main.html',
+    './tag/mode.html',
     './tag/rii.html',
+    './tag/rt.html',
     './css/style.css',
     './app.js',
+    './ri.js',
     './rdx.js',
     './local.js'
 ];

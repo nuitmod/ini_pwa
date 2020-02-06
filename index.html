@@ -34,14 +34,17 @@
         <script src="https://cdn.jsdelivr.net/npm/riot@4/riot+compiler.min.js"></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/preact/8.5.2/preact.min.js'></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/preact/8.5.2/preact.min.js.map'></script>
+        <script src="https://unpkg.com/@riotjs/route/route.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/riot-route@3.1.2/dist/route.min.js"></script>
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-title" content="Ionic App" />
+        <meta name="apple-mobile-web-app-title" content="ini_pwa" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <link rel="stylesheet" href="./css/style.css">
         <script
         src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
         crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <style>
             :root{
                 --theme:#0099ff;
@@ -51,19 +54,21 @@
         <script async src="https://cdn.ampproject.org/v0.js"></script>
     </head>
     <body>
+      <header></header>
       <section>
   <div class="bar">
     <nav id="desktop">
       <ul>
-        <li><a href="main">main</a></li>
-        <li><a href="void">void</a></li>
+        <li><a href="#main">main</a></li>
+        <li><a href="#mode">mode</a></li>
+        <li><a href="#rii">rii</a></li>
         <li><a href="rend">rend</a></li>
         <li><a href="https://yoox.com">yoox.com</a></li>
       </ul>
     </nav>
   </div>
   <div id="burg">
-    <a href="#">
+    <a>
       <span class="bar" id="top"></span>
       <span class="bar" id="middle"></span>
       <span class="bar" id="bottom"></span>
@@ -72,119 +77,145 @@
   <div class="mobile-tab">
     <nav id="mobile">
       <ul>
-        <li><a href="main">main</a></li>
-        <li><a href="void">void</a></li>
-        <li><a href="rend">rend</a></li>
+        <li><a href="#main">main</a></li>
+        <li><a href="#mode">mode</a></li>
+        <li><a href="#rii">rii</a></li>
+        <li><a href="#rend">rend</a></li>
         <li><a href="https://yoox.com">yoox.com</a></li>
       </ul>
     </nav>
   </div>
 </section>
-      <template id="mtrlz">
-      <section>
-        <nav>
-          <div class="nav-wrapper">
-            <a href="#!" class="brand-logo center">Logo</a>
-            <ul class="left hide-on-med-and-down">
-              <li><a href="#">Sass</a></li>
-              <li><a href="#">Components</a></li>
-              <li class="active"><a href="collapsible.html">JavaScript</a></li>
-            </ul>
-          </div>
-        </nav>
-      </section>
-    </template>
-    <template id="temp-shadow">
-      <div class="">
-        <h5>ini pwa</h5>
-      </div>
-      <div class="">
-          <img src="./img/mode.jpg" alt="" height="229" width="129">
-      </div>
-    </template>
+  <template id="temp-shadow">
+    <div class="">
+      <h5>ini pwa</h5>
+    </div>
+    <div class="">
+        <img src="./img/mode.jpg" alt="" height="229" width="129">
+    </div>
+  </template>
+<section>
+  <div class="amp-text">
+    <div class="">
+      <h5>ini pwa amp</h5>
+    </div>
+    <div class="">
+      <amp-img src="./img/mode.jpg" alt="" height="209" width="109"></amp-img>
+    </div>
+  </div>
+</section>
+<section>
+  <h5>rdx do store data</h5>
+  <input id="todo" type="text">
+  <button id="submit-todo">add data</button>
+  <input id='add-local' type="button" name="" value="add to local">
+  <input id='clear-local'type="button" name="" value="clear local">
+  <div id="container"></div>
+</section>
+<section>
+  <div id="local-test">
+    <h5>local test</h5>
+    <form>
+      <input id="item" type="text" placeholder="New">
+    </form>
+    <h5>Items</h5>
+    <ul id="ul-id"></ul>
+      <input id='clear-all' type="button" name="" value="clear all">
+  </div>
+</section>
+<section id="all-tag">
+  <h6>happy chinese new year!</h6>
+  <div class="">
+      <img src="./img/code.jpg" alt="" height="129" width="229">
+  </div>
+  <div class="">
+    <h6>ini mode pwa tag</h6>
+  </div>
+  <div class="">
+      <img src="./img/mod2.jpg" alt="" height="229" width="129">
+  </div>
+</section>
+<section id="in-menu">
+  <ul>
+     <li><a href="#home">home</a></li>
+     <li><a href="#main">main</a></li>
+     <li><a href="#rii">rii</a></li>
+  </ul>
+</section>
+<section>
+  <h6>request tag jq</h6>
+  <form>
+   <input id="dat2" type="text" name="data" value="" placeholder="data">
+   <input type="submit" name="" value="send">
+  </form>
+<br>
+<h5>jq output</h5>
+<div id="out"></div>
+</section>
+<section>
+  <div id="tags">
+    <req></req>
+    <mode></mode>
+    <rii></rii>
+    <rt></rt>
+  </div>
+</section>
 
-    <section>
-      <div class="amp-text">
-        <div class="">
-          <h5>ini pwa amp</h5>
-        </div>
-        <div class="">
-          <amp-img src="./img/mode.jpg" alt="" height="209" width="109"></amp-img>
-        </div>
-      </div>
-    </section>
-    <section>
-      <h5>rdx do store data</h5>
-      <input id="todo" type="text">
-      <button id="submit-todo">add data</button>
-      <input id='add-local' type="button" name="" value="add to local">
-      <input id='clear-local'type="button" name="" value="clear local">
-      <div id="container"></div>
-    </section>
-    <section>
-      <div id="local-test">
-        <h5>local test</h5>
-        <form>
-          <input id="item" type="text" placeholder="New">
-        </form>
 
-        <h5>Items</h5>
-        <ul id="ul-id"></ul>
-          <input id='clear-all' type="button" name="" value="clear all">
-      </div>
-    </section>
-    <section>
-      <rii></rii>
-      <main></main>
-    </section>
-
-    <div id="root"></div>
+<div id="root"></div>
 
 
-    <script src="./tag/main.html" type="riot"></script>
-    <script src="./tag/rii.html" type="riot"></script>
+<script src="./tag/rt.html" type="riot"></script>
+<script src="./tag/req.html" type="riot"></script>
+<script src="./tag/mode.html" type="riot"></script>
+<script src="./tag/rii.html" type="riot"></script>
+<!--<script src="./tag/header.html" type="riot"></script>-->
+<script>
+function jq(){
+  $('.mobile-tab').hide();
+  $('#burg').on('click', function(){
+    $('.mobile-tab').slideToggle(600)
+  });
+  $('#in-menu').hide();
+}
 
-    <script>
-    $('.mobile-tab').hide();
-    $('#burg').on('click', function(){
-      $('.mobile-tab').slideToggle(600)
-    });
+jq();
 
+$('form').on('submit', function(e){
+  var dat1={ dat: $('#dat2').val() }
+  var dat2={ dat: "data from pwa"}
+  $.ajax({
+    //data: dat2,
+    type: 'get',
+    headers: "Content-Type: application/json",
+    url: "http://127.0.0.1:5000/getrq"
+    //url: "localhost:5000/get"
+  }).done(function(data){
+  //  if(data)
+    console.log(data.dat);
+    //console.log(data);
+    $('#out').text(data.dat);
+  })
+  e.preventDefault()
+})
 
-//riot.mount('*')
+function vanil_jq(){
+  var mb_tab=document.getElementsByClassName('.mobile-tab');
+  var burg = document.getElementById('burg');
+  console.log(typeof(burg));
+  for(let i in burg){
+    console.log(i);
+  }
+  //burg.addEventListener('click', function(){
+  //  mb_tab.slideToggle(600);
+  //})
+}
 
-/*
-    riot.compile().then(() => {
-      riot.mount('my-test','todo');
-      //riot.mount('todo');
-    })
-
-*/
-
-(async function(){
-  await riot.compile()
-    riot.mount('main')
-    riot.mount('rii')
-  //riot.mount('*')
-})()
-
-/*
-    riot.compile().then(() => {
-       riot.mount('todo', {
-         title: 'I want to behave!',
-         items: [
-           { title: 'Avoid excessive caffeine', done: true },
-           { title: 'Hidden item',  hidden: true },
-           { title: 'Be less provocative'  },
-           { title: 'Be nice to people' }
-         ]
-       })
-     })
-*/
-      </script>
-
-    <script src='./app.js'></script>
-    <script src='./rdx.js'></script>
-    <script src='./local.js'></script>
-    </body>
+  </script>
+  <script src='./app.js'></script>
+  <script src='./ri.js'></script>
+  <script src='./rdx.js'></script>
+  <script src='./local.js'></script>
+  <script src='./components/i1.js'></script>
+  </body>
 </html>
