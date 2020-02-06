@@ -27,15 +27,21 @@ async function post_data(){
           'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token'
         },
         data: data_post
-
-
   })
-
 }
 
 //btn.addEventListener('click', function(e){
   //post_data();
 //})
+var url_get="http://127.0.0.1:5000/getrq"
+
+async function fetch_dat(){
+  var fetch_data=await fetch(url_get)
+  var data= await fetch_data.json()
+  console.log("result of fetch ", data.dat);
+
+}
+//fetch_dat()
 
 </script>
 </req>

@@ -138,7 +138,7 @@
 <section id="in-menu">
   <ul>
      <li><a href="#home">home</a></li>
-     <li><a href="#main">main</a></li>
+     <li><a href="#mode">main</a></li>
      <li><a href="#rii">rii</a></li>
   </ul>
 </section>
@@ -151,6 +151,18 @@
 <br>
 <h5>jq output</h5>
 <div id="out"></div>
+</section>
+<section id="fetch-dat">
+  <h6>fetch request</h6>
+  <form>
+   <input id="dat" type="text" name="data" value="" placeholder="data">
+   <input id="btn-fetch" type="button" name="" value="fetch">
+  </form>
+  <br>
+  <h5>fetch output</h5>
+  <div id="f-out"></div>
+<br>
+
 </section>
 <section>
   <div id="tags">
@@ -176,11 +188,13 @@ function jq(){
   $('#burg').on('click', function(){
     $('.mobile-tab').slideToggle(600)
   });
-  $('#in-menu').hide();
+  //$('#in-menu').hide();
+  $('#all-tag').hide();
 }
 
 jq();
 
+//jq form
 $('form').on('submit', function(e){
   var dat1={ dat: $('#dat2').val() }
   var dat2={ dat: "data from pwa"}
@@ -198,6 +212,18 @@ $('form').on('submit', function(e){
   })
   e.preventDefault()
 })
+
+//fetch form
+var url_get="http://127.0.0.1:5000/getrq"
+async function fetch_dat(){
+  var fetch_data=await fetch(url_get)
+  var data = await fetch_data.json()
+  console.log("result of fetch ", data.dat);
+  $('#f-out').text(data.dat);
+}
+
+$('#btn-fetch').on('click', fetch_dat)
+
 
 function vanil_jq(){
   var mb_tab=document.getElementsByClassName('.mobile-tab');
