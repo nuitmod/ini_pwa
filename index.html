@@ -156,7 +156,8 @@
   <h6>fetch request</h6>
   <form>
    <input id="dat" type="text" name="data" value="" placeholder="data">
-   <input id="btn-fetch" type="button" name="" value="fetch">
+   <input id="btn-fetch" type="button" name="" value="req rb">
+   <input id="btn-py" type="button" name="" value="req py">
   </form>
   <br>
   <h5>fetch output</h5>
@@ -217,6 +218,7 @@ $('form').on('submit', function(e){
 var url_get="http://127.0.0.1:5000/getrq"
 var url_rb="http://127.0.0.1:4567/api"
 var url_hrk="https://rb-proj.herokuapp.com/api"
+var url_py="https://py-pro-i.herokuapp.com/api"
 
 async function fetch_dat(){
   var fetch_data=await fetch(url_hrk)
@@ -224,11 +226,19 @@ async function fetch_dat(){
   //console.log("result of fetch ", data.dat);
   //$('#f-out').text(data.dat);
   //for ruby
-  console.log("result of fetch ", data);
+  //console.log("result of fetch ", data);
   $('#f-out').text(data);
 }
 
+async function req_py(){
+  var fetch_data=await fetch(url_py)
+  var data = await fetch_data.json()
+  //console.log("result of fetch ", data);
+  $('#f-out').text(data.dat);
+}
+
 $('#btn-fetch').on('click', fetch_dat)
+$('#btn-py').on('click', req_py)
 
 
 function vanil_jq(){
