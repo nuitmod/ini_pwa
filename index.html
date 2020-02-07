@@ -215,11 +215,17 @@ $('form').on('submit', function(e){
 
 //fetch form
 var url_get="http://127.0.0.1:5000/getrq"
+var url_rb="http://127.0.0.1:4567/api"
+var url_hrk="https://rb-proj.herokuapp.com/api"
+
 async function fetch_dat(){
-  var fetch_data=await fetch(url_get)
+  var fetch_data=await fetch(url_hrk)
   var data = await fetch_data.json()
-  console.log("result of fetch ", data.dat);
-  $('#f-out').text(data.dat);
+  //console.log("result of fetch ", data.dat);
+  //$('#f-out').text(data.dat);
+  //for ruby
+  console.log("result of fetch ", data);
+  $('#f-out').text(data);
 }
 
 $('#btn-fetch').on('click', fetch_dat)
