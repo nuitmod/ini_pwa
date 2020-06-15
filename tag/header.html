@@ -1,17 +1,17 @@
 <header>
-  <link rel="stylesheet" href="../css/style.css">
-    <div class="bar">
+  <div class="bar">
     <nav id="desktop">
       <ul>
-        <li><a href="main">main</a></li>
-        <li><a href="void">void</a></li>
+        <li><a href="#main">main</a></li>
+        <li><a href="#mode">mode</a></li>
+        <li><a href="#rii">rii</a></li>
         <li><a href="rend">rend</a></li>
         <li><a href="https://yoox.com">yoox.com</a></li>
       </ul>
     </nav>
   </div>
   <div id="burg">
-    <a href="#">
+    <a>
       <span class="bar" id="top"></span>
       <span class="bar" id="middle"></span>
       <span class="bar" id="bottom"></span>
@@ -20,18 +20,29 @@
   <div class="mobile-tab">
     <nav id="mobile">
       <ul>
-        <li><a href="main">main</a></li>
-        <li><a href="void">void</a></li>
-        <li><a href="rend">rend</a></li>
+        <li><a href="#main">main</a></li>
+        <li><a href="#mode">mode</a></li>
+        <li><a href="#rii">rii</a></li>
+        <li><a href="#rend">rend</a></li>
         <li><a href="https://yoox.com">yoox.com</a></li>
       </ul>
     </nav>
   </div>
   <script>
+    //import  * as $ from "https://unpkg.com/jquery@3.3.1/dist/jquery.min.js";
+    /*
     var mb_tab=document.getElementsByClassName('.mobile-tab');
     var burg = document.getElementById('#burg');
     burg.addEventListener('click', function(){
       mb_tab.slideToggle(600);
     })
+    */
+    $(function(){
+      $('.mobile-tab').hide();
+      $('#burg').on('click', function(){
+        $('.mobile-tab').slideToggle(600)
+      });
+    });
+
   </script>
 </header>

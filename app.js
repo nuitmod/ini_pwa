@@ -14,6 +14,17 @@ if('serviceWorker' in navigator) {
     });
 }
 
+//headers
+//import  * as $ from "https://unpkg.com/jquery@3.3.1/dist/jquery.min.js";
+//var $ = require("https://unpkg.com/jquery@3.3.1/dist/jquery.min.js")
+/*
+$(function(){
+  $('.mobile-tab').hide();
+  $('#burg').on('click', function(){
+    $('.mobile-tab').slideToggle(600)
+  });
+});
+*/
 /*
 
 //riot.mount('rt')

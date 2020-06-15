@@ -29,8 +29,8 @@
         <link rel="apple-touch-icon" href="/img/icons/icon-96x96.png">
         <meta name="apple-mobile-web-app-status-bar" content="#FFE1C4">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/4.6.6/riot+compiler.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/4.6.6/riot.min.js"></script>
+    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/4.6.6/riot+compiler.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/4.6.6/riot.min.js"></script>-->
         <script src="https://cdn.jsdelivr.net/npm/riot@4/riot+compiler.min.js"></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/preact/8.5.2/preact.min.js'></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/preact/8.5.2/preact.min.js.map'></script>
@@ -45,17 +45,12 @@
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
         crossorigin="anonymous"></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-        <style>
-            :root{
-                --theme:#0099ff;
-            }
-            a{text-decoration:none;color:var(--theme)}
-        </style>
         <script async src="https://cdn.ampproject.org/v0.js"></script>
     </head>
     <body>
       <header></header>
-      <section>
+      <!--
+  <section>
   <div class="bar">
     <nav id="desktop">
       <ul>
@@ -86,6 +81,7 @@
     </nav>
   </div>
 </section>
+-->
   <template id="temp-shadow">
     <div class="">
       <h5>ini pwa</h5>
@@ -123,25 +119,6 @@
       <input id='clear-all' type="button" name="" value="clear all">
   </div>
 </section>
-<section id="all-tag">
-  <h6>happy chinese new year!</h6>
-  <div class="">
-      <img src="./img/code.jpg" alt="" height="129" width="229">
-  </div>
-  <div class="">
-    <h6>ini mode pwa tag</h6>
-  </div>
-  <div class="">
-      <img src="./img/mod2.jpg" alt="" height="229" width="129">
-  </div>
-</section>
-<section id="in-menu">
-  <ul>
-     <li><a href="#home">home</a></li>
-     <li><a href="#mode">main</a></li>
-     <li><a href="#rii">rii</a></li>
-  </ul>
-</section>
 <section>
   <h6>request tag jq</h6>
   <form>
@@ -163,7 +140,6 @@
   <h5>fetch output</h5>
   <div id="f-out"></div>
 <br>
-
 </section>
 <section>
   <div id="tags">
@@ -173,28 +149,27 @@
     <rt></rt>
   </div>
 </section>
-
-
 <div id="root"></div>
+  <img src="./icons/visibility-24px.svg">
 
+<section id="b_nav">
+  <div class="bottom-tab">
+    <ul>
+      <li><a href="#home"><img src="./icons/visibility-24px.svg"></a></li>
+      <li><a href="#mode"><img src="./icons/visibility_off-24px.svg"></a></li>
+      <li><a href="#rii">rii</a></li>
+      <li><a href="#rend">rend</a></li>
+      <li><a href="https://yoox.com">yoox.com</a></li>
+    </ul>
+  </div>
+</section>
 
 <script src="./tag/rt.html" type="riot"></script>
 <script src="./tag/req.html" type="riot"></script>
 <script src="./tag/mode.html" type="riot"></script>
 <script src="./tag/rii.html" type="riot"></script>
-<!--<script src="./tag/header.html" type="riot"></script>-->
+<script src="./tag/header.html" type="riot"></script>
 <script>
-function jq(){
-  $('.mobile-tab').hide();
-  $('#burg').on('click', function(){
-    $('.mobile-tab').slideToggle(600)
-  });
-  //$('#in-menu').hide();
-  $('#all-tag').hide();
-}
-
-jq();
-
 //jq form
 $('form').on('submit', function(e){
   var dat1={ dat: $('#dat2').val() }
@@ -254,7 +229,7 @@ function vanil_jq(){
 }
 
   </script>
-  <script src='./app.js'></script>
+  <script src='./app.js' type="module"></script>
   <script src='./ri.js'></script>
   <script src='./rdx.js'></script>
   <script src='./local.js'></script>

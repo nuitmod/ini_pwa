@@ -1,6 +1,8 @@
 (async function(){
   await riot.compile()
-  riot.mount('req')
+//  riot.mount('req')
+  riot.mount('header')
+//  riot.mount('rt')
   /*
   route((tag) => {
     riot.mount('route', tag)
