@@ -26,12 +26,9 @@
         <title>ini_pwa</title>
         <link rel="manifest" href="manifest.json">
         <link rel="canonical" href="$SOME_URL">
-        <link rel="shortcut icon" href="assets/phone.png">
-        <link rel="apple-touch-icon" href="assets/phone.png">
+        <link rel="shortcut icon" href="assets/term.png">
+        <link rel="apple-touch-icon" href="assets/term.png">
         <meta name="apple-mobile-web-app-status-bar" content="#FFE1C4">
-<!--<link rel="shortcut icon" href="https://cdn.glitch.com/49d34dc6-8fbd-46bb-8221-b99ffd36f1af%2Ftouchicon-180.png?v=1566411949736">
- <link rel="apple-touch-icon" href="https://cdn.glitch.com/49d34dc6-8fbd-46bb-8221-b99ffd36f1af%2Ftouchicon-180.png?v=1566411949736">
-<link rel="apple-touch-icon" href="https://cdn.glitch.com/49d34dc6-8fbd-46bb-8221-b99ffd36f1af%2Ftouchicon-180.png?v=1566411949736">-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.min.js"></script>
     <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/4.6.6/riot+compiler.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/4.6.6/riot.min.js"></script>-->
@@ -58,7 +55,7 @@
       <h5>ini pwa</h5>
     </div>
     <div class="">
-        <img src="./img/mode.jpg" alt="" height="189" width="89">
+        <img src="./img/mode.jpg" alt="" height="169" width="72">
     </div>
   </template>
 <section>
@@ -67,7 +64,7 @@
       <h5>ini pwa amp</h5>
     </div>
     <div class="">
-      <amp-img src="./img/mode.jpg" alt="" height="189" width="89"></amp-img>
+      <amp-img src="./img/mode.jpg" alt="" height="169" width="72"></amp-img>
     </div>
   </div>
 </section>
@@ -158,8 +155,8 @@ $('#btn-fetch').on('click', fetch_dat)
 $('#btn-py').on('click', req_py)
 
 $('.amp-text').on('click', function(){
-   $(this).css({'opacity': 0.5})
-//  $('.amp-text').fadeOut(200)
+  $(this).css({'opacity': 0.5})
+  $('body').css({'background': '#0f0f0f'})
 })
 
 /*

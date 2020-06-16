@@ -4,7 +4,7 @@
 }
 body{
   opasity: 0.39;
-  background: #0f0f0f;
+//  background: #0f0f0f;
 }
 #burg a{
   display: block;
@@ -95,10 +95,10 @@ span{
     color: #2b2b2b;
   }
 }
-/*
-img{
- opacity: 0.8;
-}*/
+
+img:hover{
+ background: #000;
+}
 .bottom-tab{
   position: fixed;
   bottom: 0;
@@ -124,7 +124,7 @@ img{
   background: lightgray;
 }
 
-input, button, h5, h6{
+input, button, h6{
   color: lightgray;
   background-color: black;
 }
