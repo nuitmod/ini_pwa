@@ -1,12 +1,21 @@
 <req>
   <h6>request tag</h6>
   <form>
-   <input id="dat2" type="text" name="data" value="" placeholder="data">
+   <input id="dat1" type="text" name="data" value="" placeholder="data">
    <input id="btn-ax" type="button" name="" value="post axios">
   </form>
 <br>
 <div id="out"><h5>axios output</h5></div>
-
+<section>
+  <h6>request tag jq</h6>
+  <form>
+   <input id="dat2" type="text" name="data" value="" placeholder="data">
+   <input type="submit" name="" value="send">
+  </form>
+<br>
+<h5>jq output</h5>
+<div id="out"></div>
+</section>
 
 <script>
 
@@ -42,6 +51,26 @@ async function fetch_dat(){
 
 }
 //fetch_dat()
+//jq form
+$(function(){
+  $('form').on('submit', function(e){
+    var dat1={ dat: $('#dat2').val() }
+    var dat2={ dat: "data from pwa"}
+    $.ajax({
+      //data: dat2,
+      type: 'get',
+      headers: "Content-Type: application/json",
+      url: "http://127.0.0.1:5000/getrq"
+      //url: "localhost:5000/get"
+    }).done(function(data){
+    //  if(data)
+      console.log(data.dat);
+      //console.log(data);
+      $('#out').text(data.dat);
+    })
+    e.preventDefault()
+  })
+})
 
 </script>
 </req>

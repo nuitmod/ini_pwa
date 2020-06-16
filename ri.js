@@ -3,14 +3,7 @@
 //  riot.mount('req')
   riot.mount('header')
 //  riot.mount('rt')
-  /*
-  route((tag) => {
-    riot.mount('route', tag)
-  })
-*/
-//  route('/', function(){
-//    riot.mount('route');
-//  })
+
 var curr_page=null
 
 route(

@@ -20,14 +20,18 @@
         <meta property="og:description" content="This is a PWA called ini_pwa">
         <meta property="og:site_name" content="ini_pwa">
         <meta name="fragment" content="!">
-        <link rel=icon sizes=192x192 href="assets/logo-192.png">
-        <meta name="theme-color" content="#0099ff" />
+      <!--  <link rel=icon sizes=192x192 href="assets/logo-192.png">-->
+        <meta name="theme-color" content="#000" />
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
         <title>ini_pwa</title>
         <link rel="manifest" href="manifest.json">
         <link rel="canonical" href="$SOME_URL">
-        <link rel="apple-touch-icon" href="/img/icons/icon-96x96.png">
+        <link rel="shortcut icon" href="assets/phone.png">
+        <link rel="apple-touch-icon" href="assets/phone.png">
         <meta name="apple-mobile-web-app-status-bar" content="#FFE1C4">
+<!--<link rel="shortcut icon" href="https://cdn.glitch.com/49d34dc6-8fbd-46bb-8221-b99ffd36f1af%2Ftouchicon-180.png?v=1566411949736">
+ <link rel="apple-touch-icon" href="https://cdn.glitch.com/49d34dc6-8fbd-46bb-8221-b99ffd36f1af%2Ftouchicon-180.png?v=1566411949736">
+<link rel="apple-touch-icon" href="https://cdn.glitch.com/49d34dc6-8fbd-46bb-8221-b99ffd36f1af%2Ftouchicon-180.png?v=1566411949736">-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.min.js"></script>
     <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/4.6.6/riot+compiler.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/4.6.6/riot.min.js"></script>-->
@@ -49,45 +53,12 @@
     </head>
     <body>
       <header></header>
-      <!--
-  <section>
-  <div class="bar">
-    <nav id="desktop">
-      <ul>
-        <li><a href="#main">main</a></li>
-        <li><a href="#mode">mode</a></li>
-        <li><a href="#rii">rii</a></li>
-        <li><a href="rend">rend</a></li>
-        <li><a href="https://yoox.com">yoox.com</a></li>
-      </ul>
-    </nav>
-  </div>
-  <div id="burg">
-    <a>
-      <span class="bar" id="top"></span>
-      <span class="bar" id="middle"></span>
-      <span class="bar" id="bottom"></span>
-    </a>
-  </div>
-  <div class="mobile-tab">
-    <nav id="mobile">
-      <ul>
-        <li><a href="#main">main</a></li>
-        <li><a href="#mode">mode</a></li>
-        <li><a href="#rii">rii</a></li>
-        <li><a href="#rend">rend</a></li>
-        <li><a href="https://yoox.com">yoox.com</a></li>
-      </ul>
-    </nav>
-  </div>
-</section>
--->
   <template id="temp-shadow">
     <div class="">
       <h5>ini pwa</h5>
     </div>
     <div class="">
-        <img src="./img/mode.jpg" alt="" height="229" width="129">
+        <img src="./img/mode.jpg" alt="" height="189" width="89">
     </div>
   </template>
 <section>
@@ -96,7 +67,7 @@
       <h5>ini pwa amp</h5>
     </div>
     <div class="">
-      <amp-img src="./img/mode.jpg" alt="" height="209" width="109"></amp-img>
+      <amp-img src="./img/mode.jpg" alt="" height="189" width="89"></amp-img>
     </div>
   </div>
 </section>
@@ -106,7 +77,7 @@
   <button id="submit-todo">add data</button>
   <input id='add-local' type="button" name="" value="add to local">
   <input id='clear-local'type="button" name="" value="clear local">
-  <div id="container"></div>
+  <h6><div id="container"></div></h6>
 </section>
 <section>
   <div id="local-test">
@@ -114,31 +85,20 @@
     <form>
       <input id="item" type="text" placeholder="New">
     </form>
-    <h5>Items</h5>
-    <ul id="ul-id"></ul>
+    <h6>Items</h6>
+    <h6><ul id="ul-id"></ul></h6>
       <input id='clear-all' type="button" name="" value="clear all">
   </div>
 </section>
-<section>
-  <h6>request tag jq</h6>
-  <form>
-   <input id="dat2" type="text" name="data" value="" placeholder="data">
-   <input type="submit" name="" value="send">
-  </form>
-<br>
-<h5>jq output</h5>
-<div id="out"></div>
-</section>
 <section id="fetch-dat">
-  <h6>fetch request</h6>
+  <h5>fetch request</h5>
   <form>
    <input id="dat" type="text" name="data" value="" placeholder="data">
    <input id="btn-fetch" type="button" name="" value="req rb">
    <input id="btn-py" type="button" name="" value="req py">
   </form>
-  <br>
-  <h5>fetch output</h5>
-  <div id="f-out"></div>
+  <h6>fetch output</h6>
+  <h6><div id="f-out"></div></h6>
 <br>
 </section>
 <section>
@@ -156,9 +116,9 @@
   <div class="bottom-tab">
     <ul>
       <li><a href="#home"><img src="./icons/visibility-24px.svg"></a></li>
-      <li><a href="#mode"><img src="./icons/visibility_off-24px.svg"></a></li>
-      <li><a href="#rii">rii</a></li>
-      <li><a href="#rend">rend</a></li>
+      <li><a href="#mode"><img src="./icons/smartphone-24px.svg"></a></li>
+      <li><a href="#rii"><img src="./icons/poll-24px.svg"></a></li>
+      <li><a href="#rend"><img src="./icons/visibility_off-24px.svg"></a></li>
       <li><a href="https://yoox.com">yoox.com</a></li>
     </ul>
   </div>
@@ -170,24 +130,6 @@
 <script src="./tag/rii.html" type="riot"></script>
 <script src="./tag/header.html" type="riot"></script>
 <script>
-//jq form
-$('form').on('submit', function(e){
-  var dat1={ dat: $('#dat2').val() }
-  var dat2={ dat: "data from pwa"}
-  $.ajax({
-    //data: dat2,
-    type: 'get',
-    headers: "Content-Type: application/json",
-    url: "http://127.0.0.1:5000/getrq"
-    //url: "localhost:5000/get"
-  }).done(function(data){
-  //  if(data)
-    console.log(data.dat);
-    //console.log(data);
-    $('#out').text(data.dat);
-  })
-  e.preventDefault()
-})
 
 //fetch form
 var url_get="http://127.0.0.1:5000/getrq"
@@ -215,7 +157,12 @@ async function req_py(){
 $('#btn-fetch').on('click', fetch_dat)
 $('#btn-py').on('click', req_py)
 
+$('.amp-text').on('click', function(){
+   $(this).css({'opacity': 0.5})
+//  $('.amp-text').fadeOut(200)
+})
 
+/*
 function vanil_jq(){
   var mb_tab=document.getElementsByClassName('.mobile-tab');
   var burg = document.getElementById('burg');
@@ -227,7 +174,7 @@ function vanil_jq(){
   //  mb_tab.slideToggle(600);
   //})
 }
-
+*/
   </script>
   <script src='./app.js' type="module"></script>
   <script src='./ri.js'></script>

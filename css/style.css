@@ -4,6 +4,7 @@
 }
 body{
   opasity: 0.39;
+  background: #0f0f0f;
 }
 #burg a{
   display: block;
@@ -95,11 +96,9 @@ span{
   }
 }
 /*
-#b_nav{
-  position: absolute;
-  bottom: 0;
-}
-*/
+img{
+ opacity: 0.8;
+}*/
 .bottom-tab{
   position: fixed;
   bottom: 0;
@@ -125,7 +124,7 @@ span{
   background: lightgray;
 }
 
-input, button{
+input, button, h5, h6{
   color: lightgray;
   background-color: black;
 }
