@@ -4,7 +4,7 @@
 }
 body{
   opasity: 0.39;
-//  background: #0f0f0f;
+  background: #0f0f0f;
 }
 #burg a{
   display: block;
@@ -121,10 +121,17 @@ img:hover{
   padding: 0;
 }
 .bottom-tab img{
-  background: lightgray;
+  background: gray;
 }
 
 input, button, h6{
   color: lightgray;
   background-color: black;
+}
+audio{
+  height: 10px;
+  color: black;
+  background: black;
+  background-color: black;
+  z-index: 9;
 }

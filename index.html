@@ -33,8 +33,6 @@
     <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/4.6.6/riot+compiler.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/4.6.6/riot.min.js"></script>-->
         <script src="https://cdn.jsdelivr.net/npm/riot@4/riot+compiler.min.js"></script>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/preact/8.5.2/preact.min.js'></script>
-        <script src='https://cdnjs.cloudflare.com/ajax/libs/preact/8.5.2/preact.min.js.map'></script>
         <script src="https://unpkg.com/@riotjs/route/route.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/riot-route@3.1.2/dist/route.min.js"></script>
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,6 +48,17 @@
     </head>
     <body>
       <header></header>
+      <section id="b_nav">
+        <div class="bottom-tab">
+          <ul>
+            <li><a href="#home"><img src="./icons/visibility-24px.svg"></a></li>
+            <li><a href="#mode"><img src="./icons/smartphone-24px.svg"></a></li>
+            <li><a href="#rii"><img src="./icons/poll-24px.svg"></a></li>
+            <li><a href="#rend"><img src="./icons/visibility_off-24px.svg"></a></li>
+            <li><a href="https://yoox.com">yoox.com</a></li>
+          </ul>
+        </div>
+      </section>
   <template id="temp-shadow">
     <div class="">
       <h5>ini pwa</h5>
@@ -72,8 +81,10 @@
   <h5>rdx do store data</h5>
   <input id="todo" type="text">
   <button id="submit-todo">add data</button>
-  <input id='add-local' type="button" name="" value="add to local">
-  <input id='clear-local'type="button" name="" value="clear local">
+  <button id='add-local'>add to local</button>
+  <button id='clear-local'>clear local</button>
+<!--  <input id='add-local' type="button" name="" value="add to local">
+  <input id='clear-local'type="button" name="" value="clear local">-->
   <h6><div id="container"></div></h6>
 </section>
 <section>
@@ -84,20 +95,24 @@
     </form>
     <h6>Items</h6>
     <h6><ul id="ul-id"></ul></h6>
-      <input id='clear-all' type="button" name="" value="clear all">
+      <button id='clear-all'>clear all</button>
+<!--      <input id='clear-all' type="button" name="" value="clear all">-->
   </div>
 </section>
 <section id="fetch-dat">
   <h5>fetch request</h5>
   <form>
    <input id="dat" type="text" name="data" value="" placeholder="data">
-   <input id="btn-fetch" type="button" name="" value="req rb">
-   <input id="btn-py" type="button" name="" value="req py">
+   <button id="btn-fetch">req rb</button>
+   <button id="btn-py">req py</button>
+<!--   <input id="btn-fetch" type="button" name="" value="req rb">
+   <input id="btn-py" type="button" name="" value="req py">-->
   </form>
   <h6>fetch output</h6>
   <h6><div id="f-out"></div></h6>
 <br>
 </section>
+
 <section>
   <div id="tags">
     <req></req>
@@ -108,18 +123,13 @@
 </section>
 <div id="root"></div>
   <img src="./icons/visibility-24px.svg">
+  <div>
+    <h6>radio_live</h6>
+    <audio controls>
+     <source src="https://radiohost.riddimdub.com/radio/8000/radio.mp3" type="audio/mpeg">
+    <audio>
+  <div>
 
-<section id="b_nav">
-  <div class="bottom-tab">
-    <ul>
-      <li><a href="#home"><img src="./icons/visibility-24px.svg"></a></li>
-      <li><a href="#mode"><img src="./icons/smartphone-24px.svg"></a></li>
-      <li><a href="#rii"><img src="./icons/poll-24px.svg"></a></li>
-      <li><a href="#rend"><img src="./icons/visibility_off-24px.svg"></a></li>
-      <li><a href="https://yoox.com">yoox.com</a></li>
-    </ul>
-  </div>
-</section>
 
 <script src="./tag/rt.html" type="riot"></script>
 <script src="./tag/req.html" type="riot"></script>
