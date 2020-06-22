@@ -1,8 +1,27 @@
 <mode>
-  <div class="">
-    <h5>ini pwa</h5>
-  </div>
+  <h5>{ name }</h5>
   <div class="">
       <img src="./img/mod2.jpg" alt=""  height="159" width="72">
+      <h5>{wm}</h5>
   </div>
+  <div>
+  <ol>
+    <li each='{ i in wm }'>{ i }</li>
+  </ol>
+<div each='{ i in wm }'>{ i }</div>
+  <ul>
+    <li each='{ i in wm }'>{ i }</li>
+  </ul>
+</div>
+  <style>
+    mode h5{ background-color: #fbe3de }
+  </style>
+<script>
+    var name="miut";
+    var wm=["ruth","ivvie","iiya"];
+    this.data=[
+      {name: 'Ruth'},
+      {name: "Maud"}
+    ]
+  </script>
 </mode>
