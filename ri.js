@@ -2,6 +2,7 @@
   await riot.compile()
 //  riot.mount('req')
   riot.mount('header')
+  riot.mount('menu')
 //  riot.mount('rt')
 
 var curr_page=null

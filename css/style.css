@@ -4,7 +4,7 @@
 }
 body{
   opasity: 0.39;
-  background: #0f0f0f;
+  background: black;//#0f0f0f;
 }
 #burg a{
   display: block;
@@ -98,6 +98,7 @@ span{
 
 img:hover{
  background: #000;
+ opacity: 0.5;
 }
 .bottom-tab{
   position: fixed;
@@ -133,5 +134,5 @@ audio{
   color: black;
   background: black;
   background-color: black;
-  z-index: 9;
+  z-index: 12;
 }

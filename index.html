@@ -26,8 +26,8 @@
         <title>ini_pwa</title>
         <link rel="manifest" href="manifest.json">
         <link rel="canonical" href="$SOME_URL">
-        <link rel="shortcut icon" href="assets/term2.png">
-        <link rel="apple-touch-icon" href="assets/term2.png">
+        <link rel="shortcut icon" href="assets/term5.png">
+        <link rel="apple-touch-icon" href="assets/terme5.png">
         <meta name="apple-mobile-web-app-status-bar" content="#FFE1C4">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.min.js"></script>
     <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/4.6.6/riot+compiler.min.js"></script>
@@ -48,6 +48,7 @@
     </head>
     <body>
       <header></header>
+      <menu></menu>
       <section id="b_nav">
         <div class="bottom-tab">
           <ul>
@@ -117,7 +118,7 @@
 </section>
 <div id="root"></div>
   <img src="./icons/visibility-24px.svg">
-  <div>
+  <div style="z-index:15">
     <h6>riddimdub radio_live</h6>
     <audio controls>
      <source src="https://radiohost.riddimdub.com/radio/8000/radio.mp3" type="audio/mpeg">
@@ -127,6 +128,7 @@
 
 <script src="./tag/rt.html" type="riot"></script>
 <script src="./tag/req.html" type="riot"></script>
+<script src="./tag/menu.html" type="riot"></script>
 <script src="./tag/mode.html" type="riot"></script>
 <script src="./tag/rii.html" type="riot"></script>
 <script src="./tag/header.html" type="riot"></script>
@@ -158,11 +160,12 @@ async function req_py(){
 $('#btn-fetch').on('click', fetch_dat)
 $('#btn-py').on('click', req_py)
 
-$('.amp-text').on('click', function(){
-  $(this).css({'opacity': 0.5})
-  $('body').css({'background': '#000'})
-})
-
+function change_theme(){
+  $('.amp-text').on('click', function(){
+    $(this).css({'opacity': 0.5})
+    $('body').css({'background': '#000'})
+  })
+}
 /*
 function vanil_jq(){
   var mb_tab=document.getElementsByClassName('.mobile-tab');
