@@ -74,7 +74,7 @@
       <h5>ini pwa amp</h5>
     </div>
     <div class="">
-      <amp-img src="./img/mode.jpg" alt="" height="159" width="72"></amp-img>
+      <amp-img src="./img/mode.jpg" alt="" height="89" width="39"></amp-img>
     </div>
   </div>
 </section>
@@ -123,7 +123,11 @@
     <audio controls>
      <source src="https://radiohost.riddimdub.com/radio/8000/radio.mp3" type="audio/mpeg">
     <audio>
-  <div>
+    <h6>breakbeatzone radio station</h6>
+    <audio controls>
+     <source src="https://streaming.radio.co/s9ad0ff120/listen" type="audio/mpeg">
+    <audio>
+  </div>
 
 
 <script src="./tag/rt.html" type="riot"></script>
@@ -143,7 +147,6 @@ var url_py="https://py-pro-i.herokuapp.com/api"
 async function fetch_dat(){
   var fetch_data=await fetch(url_hrk)
   var data = await fetch_data.json()
-  //console.log("result of fetch ", data.dat);
   //$('#f-out').text(data.dat);
   //for ruby
   //console.log("result of fetch ", data);
@@ -153,37 +156,23 @@ async function fetch_dat(){
 async function req_py(){
   var fetch_data=await fetch(url_py)
   var data = await fetch_data.json()
-  //console.log("result of fetch ", data);
   $('#f-out').text(data.dat);
 }
 
 $('#btn-fetch').on('click', fetch_dat)
 $('#btn-py').on('click', req_py)
 
-function change_theme(){
+//function change_theme(){
   $('.amp-text').on('click', function(){
-    $(this).css({'opacity': 0.5})
-    $('body').css({'background': '#000'})
+  //  $(this).css({'opacity': 0.5})
+    $('body').css({'background': 'ghostwhite'})
   })
-}
-/*
-function vanil_jq(){
-  var mb_tab=document.getElementsByClassName('.mobile-tab');
-  var burg = document.getElementById('burg');
-  console.log(typeof(burg));
-  for(let i in burg){
-    console.log(i);
-  }
-  //burg.addEventListener('click', function(){
-  //  mb_tab.slideToggle(600);
-  //})
-}
-*/
+//}
+
   </script>
   <script src='./app.js' type="module"></script>
   <script src='./ri.js'></script>
   <script src='./rdx.js'></script>
   <script src='./local.js'></script>
-  <script src='./components/i1.js'></script>
   </body>
 </html>
