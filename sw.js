@@ -1,8 +1,8 @@
 //var CACHE_NAME = 'version-1'; // bump this version when you make changes.
-var static_cash_name='site-static-v2';
+var static_cash_name='site-static-v3';
 // Put all your urls that you want to cache in this array
 var urlsToCache = [
-    './index.html',
+  //  './index.html',
     './assets/logo-192.png',
     './app.js',
     './ri.js',
