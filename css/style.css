@@ -53,7 +53,7 @@ span{
     display: none;
   }
   .bar{
-    background: ghostwhite; #232323;
+    //background: ghostwhite; #232323;
     display: flex;
     width: 100%;
     align-items: center;
@@ -80,7 +80,7 @@ span{
     color: ghostwhite; white;
     cursor: pointer;
     font-weight: lighter;
-    background: ghostwhite; #232323;
+    //background: ghostwhite; #232323;
     padding: 10px 10px;
     text-align: center;
     width: 70px;
