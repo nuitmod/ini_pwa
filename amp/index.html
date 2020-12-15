@@ -38,7 +38,7 @@
   </script>
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script>
-  <link rel="manifest" href="../manifest.webmanifest">
+  <link rel="manifest" href="../manifest.json">
   <meta name="apple-mobile-web-app-status-bar" content="">
   <style amp-custom>
   :root{
@@ -67,12 +67,33 @@
   }
   amp-accordion li{
     padding: 0;
-    margin: 2px;
+    margin: 3px;
     list-style: none;
   }
   amp-accordion a{
     color: var(--menu-a);
     text-decoration: none;
+  }
+  amp-sidebar{
+    background-color: var(--bg-menu);
+    width: 170px;
+  }
+  amp-sidebar ul{
+    padding: 5px 15px
+  }
+  amp-sidebar li{
+    list-style: none;
+    padding: 2px
+  }
+  amp-sidebar a{
+    text-decoration: none;
+    color: var(--bg-main);
+  }
+  button{
+    background-color: var(--bg-menu);
+    color: var(--bg-menu);
+    font-size: 10px;
+    border: 0;
   }
   .menu{
     background-color: var(--bg-menu);
@@ -111,12 +132,28 @@
       </div>
     </section>
   </amp-accordion>
+  <amp-sidebar id="sidebar1" layout="nodisplay" side="right">
+  <ul>
+    <li><a href="#idTwo" on="tap:idTwo.scrollTo">_</a></li>
+    <li><a href="https://nuitmod.github.io/io_proj">io_proj</a></li>
+    <li><a href="https://nuitmod.github.io/mod_pwa">mod_pwa</a></li>
+    <li><a href="https://nuitmod.github.io/mod_i">mod_i</a></li>
+    <li><a href="https://nuitmod.github.io/npx_io">npx_io</a></li>
+    <li><a href="https://yoox.com">yoox.com</a></li><br>
+    <li><a href="https://nuitmod.github.io/ini_pwa">to main version</a></li>
+  </ul>
+</amp-sidebar>
+<button on='tap:sidebar1'>menu</button>
+<!-- <button class="hamburger" on='tap:sidebar1.toggle'></button> -->
+<!-- <button on='tap:sidebar1'>Open</button> -->
+<!-- <button on='tap:sidebar1.open'>Open</button>
+<button on='tap:sidebar1.close'>x</button> -->
   <section id="main">
     <div id="main_data">
       <h5>main page</h5>
       <div class="mod">
         <amp-img id="mod" src="../img/mode.jpg" alt="" height="69" width="29"></amp-img>
-        <amp-img id="ier" src="../img/ier.JPG" alt=""  height="69" width="29"></amp-img>
+        <!-- <amp-img id="ier" src="../img/code.jpg" alt=""  height="69" width="29"></amp-img> -->
       </div>
     </div>
   </section>https://ice3.somafm.com/dubstep-128-mp3
@@ -124,21 +161,29 @@
   <amp-accordion disable-session-states>
     <section class="radio">
       <h6 class="menu">radio</h6>
-    <div id="radio_data" style="z-index:15">
-      <p>dubstep beyond</p>
-      <amp-audio controls>
-       <source src="https://ice3.somafm.com/dubstep-128-mp3" type="audio/mpeg">
-      </amp-audio>
-      <p>riddimdub radio_live</p>
-      <amp-audio controls>
-       <source src="https://radiohost.riddimdub.com/radio/8000/radio.mp3" type="audio/mpeg">
-      </amp-audio>
-      <p>defcon hacking :: soma_fm</p>
-      <amp-audio controls>
-       <source src="https://ice2.somafm.com/defcon-128-mp3" type="audio/mpeg">
-      </amp-audio>
-    </div>
-  </section>
+      <div id="radio_data" style="z-index:15">
+        <p>dubstep beyond</p>
+        <amp-audio preload="none" controls>
+         <source src="https://ice3.somafm.com/dubstep-128-mp3" type="audio/mpeg">
+        </amp-audio>
+        <p>riddimdub radio_live</p>
+        <amp-audio preload="none" controls>
+         <source src="https://radiohost.riddimdub.com/radio/8000/radio.mp3" type="audio/mpeg">
+        </amp-audio>
+        <p>defcon hacking :: soma_fm</p>
+        <amp-audio preload="none" controls>
+         <source src="https://ice2.somafm.com/defcon-128-mp3" type="audio/mpeg">
+        </amp-audio>
+        <p>AllHeart Christmas</p>
+        <amp-audio preload="none" controls>
+         <source src="https://str2b.openstream.co/1994?aw_0_1st.collectionid=5771&stationId=5771&publisherId=2018&k=1607089585" type="audio/mpeg">
+        </amp-audio>
+        <p>Пикник</p>
+        <amp-audio preload="none" controls>
+         <source src="https://pub0201.101.ru/stream/pro/aac/64/157?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpcCI6IjMxLjE2Mi40LjIyNCIsInVzZXJhZ2VudCI6Ik1vemlsbGFcLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdFwvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lXC84Ny4wLjQyODAuODggU2FmYXJpXC81MzcuMzYiLCJ1aWRfY2hhbm5lbCI6IjE1NyIsInR5cGVfY2hhbm5lbCI6ImNoYW5uZWwiLCJleHAiOjE2MDczNDkwMDh9.rWMD4tWmvVsNiZDACGBPwQRIYaKiryQPmLG8bNxGLJ0" type="audio/mpeg">
+        </amp-audio>
+      </div>
+    </section>
   </amp-accordion>
 </body>
 </html>
