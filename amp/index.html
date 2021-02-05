@@ -107,7 +107,7 @@
   .menu{
     background-color: var(--bg-menu);
   }
-  .radio p{
+  .main p{
     /* color: var(--bg-main); */
     font-weight: 500;
   }
@@ -128,6 +128,7 @@
   <script async custom-element="amp-audio" src="https://cdn.ampproject.org/v0/amp-audio-0.1.js"></script>
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+  <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
   <script async src="https://cdn.ampproject.org/v0.js"></script>
 </head>
 <body>
@@ -159,95 +160,152 @@
 <amp-sidebar id="sidebar2" layout="nodisplay" side="left">
   <br>
   <amp-accordion disable-session-states>
-    <section class="radio">
+    <section class="main">
       <h6 class="menu">radio</h6>
       <div>
-<ul>
-  <li><a href="#idTwo" on="tap:idTwo.scrollTo">_</a></li>
-  <li><a href="https://nuitmod.github.io/io_proj">io_proj</a></li>
-  <li><a href="https://nuitmod.github.io/mod_pwa">mod_pwa</a></li>
-  <li><a href="https://nuitmod.github.io/mod_i">mod_i</a></li>
-  <li><a href="https://nuitmod.github.io/npx_io">npx_io</a></li>
-  <li><a href="https://yoox.com">yoox.com</a></li><br>
-  <li><a href="https://nuitmod.github.io/ini_pwa">to main version</a></li>
-</ul>
-</div>
-</section>
-</amp-accordion>
-<amp-accordion disable-session-states>
-  <section class="radio">
-    <h6 class="menu">radio</h6>
-    <div>
-    <br>
-    <amp-img id="ier" src="../img/code.jpg" alt=""  height="69" width="29"></amp-img>
-    </div>
-  </section>
-</amp-accordion>
+        <ul>
+          <li><a href="#idTwo" on="tap:idTwo.scrollTo">_</a></li>
+          <li><a href="https://nuitmod.github.io/io_proj">io_proj</a></li>
+          <li><a href="https://nuitmod.github.io/mod_pwa">mod_pwa</a></li>
+          <li><a href="https://nuitmod.github.io/mod_i">mod_i</a></li>
+          <li><a href="https://nuitmod.github.io/npx_io">npx_io</a></li>
+          <li><a href="https://yoox.com">yoox.com</a></li><br>
+          <li><a href="https://nuitmod.github.io/ini_pwa">to main version</a></li>
+        </ul>
+      </div>
+    </section>
+  </amp-accordion>
+  <amp-accordion disable-session-states>
+    <section class="main">
+      <h6 class="menu">radio</h6>
+      <div>
+      <br>
+      <amp-img id="ier" src="../img/code.jpg" alt=""  height="69" width="29"></amp-img>
+      </div>
+    </section>
+  </amp-accordion>
 </amp-sidebar>
 <button on='tap:sidebar2'>menu</button>
+<button on='tap:sidebar1'>menu</button>
 <!-- <button class="hamburger" on='tap:sidebar1.toggle'></button> -->
 <!-- <button on='tap:sidebar1'>Open</button> -->
 <!-- <button on='tap:sidebar1.open'>Open</button>
 <button on='tap:sidebar1.close'>x</button> -->
-  <section id="main">
-    <div id="main_data">
-      <h5>main page</h5>
-      <div class="mod">
-        <amp-img id="mod" src="../img/mode.jpg" alt="" height="69" width="29"></amp-img>
-        <!-- <amp-img id="ier" src="../img/code.jpg" alt=""  height="69" width="29"></amp-img> -->
-        <button on='tap:sidebar1'>menu</button>
-      </div>
+<section id="main">
+  <div id="main_data">
+    <h5>main page</h5>
+    <div class="mod">
+      <amp-img id="mod" src="../img/mode.jpg" alt="" height="69" width="29"></amp-img>
+      <!-- <amp-img id="ier" src="../img/code.jpg" alt=""  height="69" width="29"></amp-img> -->
+      <!-- <button on='tap:sidebar1' style="padding-top:0">menu</button> -->
+    </div>
+  </div>
+</section>
+<!-- <br> -->
+<!-- <button on='tap:sidebar1'>menu</button> -->
+<amp-accordion disable-session-states>
+  <section class="main">
+    <h6 class="menu">radio</h6>
+    <div id="radio_data" style="z-index:15">
+      <div class="in_cont">
+        <!-- <br> -->
+        <amp-accordion disable-session-states>
+          <section class="">
+            <h6 class="menu">data</h6>
+            <div>
+              <p>dubstep beyond</p>
+              <amp-audio preload="none" controls>
+               <source src="https://ice3.somafm.com/dubstep-128-mp3" type="audio/mpeg">
+              </amp-audio>
+              <p>riddimdub radio_live</p>
+              <amp-audio preload="none" controls>
+               <source src="https://radiohost.riddimdub.com/radio/8000/radio.mp3" type="audio/mpeg">
+              </amp-audio>
+              <p>defcon hacking :: soma_fm</p>
+              <amp-audio preload="none" controls>
+               <source src="https://ice2.somafm.com/defcon-128-mp3" type="audio/mpeg">
+              </amp-audio>
+              <p>AllHeart Christmas</p>
+              <amp-audio preload="none" controls>
+               <source src="https://str2b.openstream.co/1994?aw_0_1st.collectionid=5771&stationId=5771&publisherId=2018&k=1607089585" type="audio/mpeg">
+              </amp-audio>
+              <p>Пикник</p>
+              <amp-audio preload="none" controls>
+               <source src="https://pub0201.101.ru/stream/pro/aac/64/157?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpcCI6IjMxLjE2Mi40LjIyNCIsInVzZXJhZ2VudCI6Ik1vemlsbGFcLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdFwvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lXC84Ny4wLjQyODAuODggU2FmYXJpXC81MzcuMzYiLCJ1aWRfY2hhbm5lbCI6IjE1NyIsInR5cGVfY2hhbm5lbCI6ImNoYW5uZWwiLCJleHAiOjE2MDczNDkwMDh9.rWMD4tWmvVsNiZDACGBPwQRIYaKiryQPmLG8bNxGLJ0" type="audio/mpeg">
+              </amp-audio>
+              <br>
+            </div>
+          </section>
+  </amp-accordion>
+    <amp-accordion disable-session-states>
+      <section class="">
+        <h6 class="menu">data</h6>
+        <div>
+          <amp-carousel
+width="450"
+height="300"
+layout="responsive"
+type="slides"
+role="region"
+aria-label="Basic carousel"
+autoplay
+  delay="3000"
+>
+<amp-img
+  src="../img/mode.jpg"
+  width="80"
+  height="200"
+></amp-img>
+<amp-img
+  src="../img/code.jpg"
+  width="200"
+  height="80"
+></amp-img>
+<amp-img
+  src="../img/mod2.jpg"
+  width="80"
+  height="200"
+></amp-img>
+</amp-carousel>
+
+        </div>
+      </section>
+    </amp-accordion>
+    </div>
+    <br>
     </div>
   </section>
-  <br>
+  </amp-accordion>
+
   <amp-accordion disable-session-states>
-    <section class="radio">
-      <h6 class="menu">radio</h6>
+    <section class="main">
+      <h6 class="menu">dat</h6>
       <div id="radio_data" style="z-index:15">
         <div class="in_cont">
-          <br>
           <amp-accordion disable-session-states>
             <section class="">
               <h6 class="menu">data</h6>
               <div>
-        <p>dubstep beyond</p>
-        <amp-audio preload="none" controls>
-         <source src="https://ice3.somafm.com/dubstep-128-mp3" type="audio/mpeg">
-        </amp-audio>
-        <p>riddimdub radio_live</p>
-        <amp-audio preload="none" controls>
-         <source src="https://radiohost.riddimdub.com/radio/8000/radio.mp3" type="audio/mpeg">
-        </amp-audio>
-        <p>defcon hacking :: soma_fm</p>
-        <amp-audio preload="none" controls>
-         <source src="https://ice2.somafm.com/defcon-128-mp3" type="audio/mpeg">
-        </amp-audio>
-        <p>AllHeart Christmas</p>
-        <amp-audio preload="none" controls>
-         <source src="https://str2b.openstream.co/1994?aw_0_1st.collectionid=5771&stationId=5771&publisherId=2018&k=1607089585" type="audio/mpeg">
-        </amp-audio>
-        <p>Пикник</p>
-        <amp-audio preload="none" controls>
-         <source src="https://pub0201.101.ru/stream/pro/aac/64/157?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpcCI6IjMxLjE2Mi40LjIyNCIsInVzZXJhZ2VudCI6Ik1vemlsbGFcLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdFwvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lXC84Ny4wLjQyODAuODggU2FmYXJpXC81MzcuMzYiLCJ1aWRfY2hhbm5lbCI6IjE1NyIsInR5cGVfY2hhbm5lbCI6ImNoYW5uZWwiLCJleHAiOjE2MDczNDkwMDh9.rWMD4tWmvVsNiZDACGBPwQRIYaKiryQPmLG8bNxGLJ0" type="audio/mpeg">
-        </amp-audio>
-        <br>
-      </div>
-    </section>
-    </amp-accordion>
+                <!-- <amp-img id="ier" src="../img/ph2.jpg" alt=""  height="69" width="49"></amp-img> -->
+                <amp-img id="ier" src="../img/ph1.jpg" alt=""  height="269" width="89"></amp-img>
+                <amp-img id="ier" src="../img/ph2.jpg" alt=""  height="99" width="139"></amp-img>
+                <amp-youtube data-videoid="Zqz_KQPK6ds" width="220" height="119"></amp-youtube>
+              </div>
+          </section>
+      </amp-accordion>
+
       <amp-accordion disable-session-states>
         <section class="">
           <h6 class="menu">data</h6>
           <div>
             <br>
             <amp-youtube data-videoid="7GWO2NOG1o8" width="220" height="119"></amp-youtube>
-            <amp-youtube data-videoid="Zqz_KQPK6ds" width="220" height="119"></amp-youtube>
             <amp-youtube data-videoid="IIU2USQ6TBo" width="220" height="119"></amp-youtube>
           </div>
         </section>
-      </amp-accordion>
-      </div>
-      </div>
+     </amp-accordion>
+        </div>
     </section>
-  </amp-accordion>
+</amp-accordion>
 </body>
 </html>
