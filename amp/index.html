@@ -20,7 +20,7 @@
        "image": [
          "https://nuitmod.github.io/ini_pwa/img/mode.jpg",
          "https://nuitmod.github.io/ini_pwa/img/code.JPG",
-         "https://nuitmod.github.io/ini_pwa/img/mod2.JPG",
+         "https://nuitmod.github.io/ini_pwa/img/mod2.JPG"
        ],
        "author": {
         "@type": "Person",
@@ -76,15 +76,15 @@
     text-decoration: none;
   }
   #sidebar1{
-    background-color: var(--bg-menu);
-    width: 170px;
+    background-color: rgba(0,0,0,0.8);
+    width: 570px;
   }
   #sidebar2{
     background-color: var(--bg-menu);
     width: 270px;
   }
   #sidebar2 amp-accordion{
-      width: 210px;
+    width: 210px;
   }
   amp-sidebar ul{
     padding: 5px 15px
@@ -97,12 +97,18 @@
     text-decoration: none;
     color: var(--bg-main);
   }
+  .wr-cont{
+    margin-bottom: 5px;
+  }
+  .inner{
+    margin: 8px;
+  }
   button{
-    background-color: var(--bg-menu);
-    color: var(--bg-menu);
+    background-color: #1a1a1a;
     font-size: 10px;
     border: 0;
     padding-top: 0;
+    margin: 2px 10px;
   }
   .menu{
     background-color: var(--bg-menu);
@@ -146,20 +152,10 @@
       </div>
     </section>
   </amp-accordion>
-  <amp-sidebar id="sidebar1" layout="nodisplay" side="right">
-  <ul>
-    <li><a href="#idTwo" on="tap:idTwo.scrollTo">_</a></li>
-    <li><a href="https://nuitmod.github.io/io_proj">io_proj</a></li>
-    <li><a href="https://nuitmod.github.io/mod_pwa">mod_pwa</a></li>
-    <li><a href="https://nuitmod.github.io/mod_i">mod_i</a></li>
-    <li><a href="https://nuitmod.github.io/npx_io">npx_io</a></li>
-    <li><a href="https://yoox.com">yoox.com</a></li><br>
-    <li><a href="https://nuitmod.github.io/ini_pwa">to main version</a></li>
-  </ul>
-</amp-sidebar>
-<amp-sidebar id="sidebar2" layout="nodisplay" side="left">
+
+<amp-sidebar id="sidebar1" layout="nodisplay" side="left">
   <br>
-  <amp-accordion disable-session-states>
+  <amp-accordion class="inner" disable-session-states>
     <section class="main">
       <h6 class="menu">radio</h6>
       <div>
@@ -175,7 +171,7 @@
       </div>
     </section>
   </amp-accordion>
-  <amp-accordion disable-session-states>
+  <amp-accordion class="inner" disable-session-states>
     <section class="main">
       <h6 class="menu">radio</h6>
       <div>
@@ -185,8 +181,21 @@
     </section>
   </amp-accordion>
 </amp-sidebar>
-<button on='tap:sidebar2'>menu</button>
+
+<amp-sidebar id="sidebar2" layout="nodisplay" side="right">
+<ul>
+  <li><a href="#idTwo" on="tap:idTwo.scrollTo">_</a></li>
+  <li><a href="https://nuitmod.github.io/io_proj">io_proj</a></li>
+  <li><a href="https://nuitmod.github.io/mod_pwa">mod_pwa</a></li>
+  <li><a href="https://nuitmod.github.io/mod_i">mod_i</a></li>
+  <li><a href="https://nuitmod.github.io/npx_io">npx_io</a></li>
+  <li><a href="https://yoox.com">yoox.com</a></li><br>
+  <li><a href="https://nuitmod.github.io/ini_pwa">to main version</a></li>
+</ul>
+</amp-sidebar>
+
 <button on='tap:sidebar1'>menu</button>
+<button on='tap:sidebar2'>menu</button>
 <!-- <button class="hamburger" on='tap:sidebar1.toggle'></button> -->
 <!-- <button on='tap:sidebar1'>Open</button> -->
 <!-- <button on='tap:sidebar1.open'>Open</button>
@@ -203,13 +212,13 @@
 </section>
 <!-- <br> -->
 <!-- <button on='tap:sidebar1'>menu</button> -->
-<amp-accordion disable-session-states>
+<amp-accordion class="wr-cont" disable-session-states>
   <section class="main">
     <h6 class="menu">radio</h6>
     <div id="radio_data" style="z-index:15">
       <div class="in_cont">
         <!-- <br> -->
-        <amp-accordion disable-session-states>
+        <amp-accordion class="inner" disable-session-states>
           <section class="">
             <h6 class="menu">data</h6>
             <div>
@@ -236,51 +245,51 @@
               <br>
             </div>
           </section>
-  </amp-accordion>
-    <amp-accordion disable-session-states>
-      <section class="">
-        <h6 class="menu">data</h6>
-        <div>
-          <amp-carousel
-            width="350"
-            height="300"
-            layout="responsive"
-            type="slides"
-            role="region"
-            aria-label="Basic carousel"
-            autoplay
-            delay="2000"
-            >
-            <amp-img
-              src="../img/mode.jpg"
-              width="80"
-              height="200"
-            ></amp-img>
-            <amp-img
-              src="../img/code.jpg"
-              width="200"
-              height="80"
-            ></amp-img>
-            <amp-img
-              src="../img/mod2.jpg"
-              width="80"
-              height="200"
-            ></amp-img>
-            </amp-carousel>
-        </div>
-      </section>
-    </amp-accordion>
-    </div>
+        </amp-accordion>
+        <amp-accordion class="inner" disable-session-states>
+          <section class="">
+            <h6 class="menu">data</h6>
+            <div>
+              <amp-carousel
+                width="350"
+                height="300"
+                layout="responsive"
+                type="slides"
+                role="region"
+                aria-label="Basic carousel"
+                autoplay
+                delay="2000"
+                >
+                <amp-img
+                  src="../img/mode.jpg"
+                  width="80"
+                  height="200"
+                ></amp-img>
+                <amp-img
+                  src="../img/code.jpg"
+                  width="200"
+                  height="80"
+                ></amp-img>
+                <amp-img
+                  src="../img/mod2.jpg"
+                  width="80"
+                  height="200"
+                ></amp-img>
+                </amp-carousel>
+            </div>
+          </section>
+        </amp-accordion>
+      </div>
     <br>
     </div>
   </section>
-  </amp-accordion>
-  <amp-accordion disable-session-states>
+</amp-accordion>
+<amp-accordion class="wr-cont" disable-session-states>
     <section class="main">
       <h6 class="menu">dat</h6>
       <div>
         <div class="in_cont">
-          <amp-accordion disable-session-states>
+          <amp-accordion class="inner" disable-session-states>
             <section class="">
               <h6 class="menu">pinhui 2020</h6>
               <div>
@@ -291,7 +300,7 @@
               </div>
           </section>
       </amp-accordion>
-      <amp-accordion disable-session-states>
+      <amp-accordion  class="inner" disable-session-states>
         <section class="">
           <h6 class="menu">data</h6>
           <div>
