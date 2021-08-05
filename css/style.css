@@ -3,8 +3,8 @@
   padding: 0;
 }
 body{
-  opasity: 0.39;
-  background: black;//#0f0f0f;
+  opacity: 0.39;
+  background: black;
   font-size: 11px;
 }
 #burg a{
@@ -77,10 +77,9 @@ span{
     margin: 0;
   }
   li{
-    color: ghostwhite; white;
+    color: ghostwhite; 
     cursor: pointer;
     font-weight: lighter;
-    //background: ghostwhite; #232323;
     padding: 10px 10px;
     text-align: center;
     width: 70px;
