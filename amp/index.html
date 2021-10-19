@@ -54,7 +54,7 @@
   body{
     -webkit-text-size-adjust: 100%;
     background: var(--bg-menu);
-    font-size: 10px;
+    font-size: 11px;
   }
   .menu_d{
     background: var(--bg-menu);
@@ -97,6 +97,9 @@
     text-decoration: none;
     color: var(--bg-main);
   }
+  amp-img{
+    opacity: 0.8;
+  }
   .wr-cont{
     margin-bottom: 5px;
   }
@@ -126,7 +129,7 @@
     z-index: 12;
   }
   .in_cont{
-  width: 301px;
+  width: 59%;
 }
   </style>
   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
@@ -150,6 +153,10 @@
         <li><a href="https://nuitmod.github.io/npx_io">npx_io</a></li>
         <li><a href="https://yoox.com">yoox.com</a></li>
         <li><a href="https://nuitmod.github.io/ini_pwa">to main version</a></li>
+        <div>
+          <button on='tap:sidebar1'>menu</button>
+          <button on='tap:sidebar2'>menu</button>
+        </div>
       </div>
     </section>
   </amp-accordion>
@@ -158,7 +165,7 @@
   <br>
   <amp-accordion class="inner" disable-session-states>
     <section class="main">
-      <h6 class="menu">radio</h6>
+      <h6 class="menu">_</h6>
       <div>
         <ul>
           <li><a href="#idTwo" on="tap:idTwo.scrollTo">_</a></li>
@@ -174,7 +181,7 @@
   </amp-accordion>
   <amp-accordion class="inner" disable-session-states>
     <section class="main">
-      <h6 class="menu">radio</h6>
+      <h6 class="menu">_</h6>
       <div>
       <br>
       <amp-img id="ier" src="../img/code.jpg" alt=""  height="69" width="29"></amp-img>
@@ -194,9 +201,6 @@
   <li><a href="https://nuitmod.github.io/ini_pwa">to main version</a></li>
 </ul>
 </amp-sidebar>
-
-<button on='tap:sidebar1'>menu</button>
-<button on='tap:sidebar2'>menu</button>
 <!-- <button class="hamburger" on='tap:sidebar1.toggle'></button> -->
 <!-- <button on='tap:sidebar1'>Open</button> -->
 <!-- <button on='tap:sidebar1.open'>Open</button>
@@ -245,7 +249,7 @@
               <amp-audio preload="none" controls>
                <source src="https://pub0201.101.ru/stream/pro/aac/64/157?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpcCI6IjMxLjE2Mi40LjIyNCIsInVzZXJhZ2VudCI6Ik1vemlsbGFcLzUuMCAoV2luZG93cyBOVCAxMC4wOyBXaW42NDsgeDY0KSBBcHBsZVdlYktpdFwvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lXC84Ny4wLjQyODAuODggU2FmYXJpXC81MzcuMzYiLCJ1aWRfY2hhbm5lbCI6IjE1NyIsInR5cGVfY2hhbm5lbCI6ImNoYW5uZWwiLCJleHAiOjE2MDczNDkwMDh9.rWMD4tWmvVsNiZDACGBPwQRIYaKiryQPmLG8bNxGLJ0" type="audio/mpeg">
               </amp-audio>
-               <p>ДДТ</p>
+               <!-- <p>ДДТ</p>
               <amp-audio preload="none" controls>
                <source src="https://pub0302.101.ru:8443/stream/pro/aac/64/112?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpcCI6IjM3Ljc5LjI2Ljg1IiwidXNlcmFnZW50IjoiTW96aWxsYVwvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0XC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWVcLzkyLjAuNDUxNS4xMDcgU2FmYXJpXC81MzcuMzYiLCJ1aWRfY2hhbm5lbCI6IjExMiIsInR5cGVfY2hhbm5lbCI6ImNoYW5uZWwiLCJleHAiOjE2MjgwMDMyNzN9.FarMVzcrlW16sGChjvFBjsI0IZVmZ4_ea-nDgL1dl20" type="audio/mpeg">
               </amp-audio>
@@ -256,7 +260,7 @@
               <p>lush</p>
               <amp-audio preload="none" controls>
                <source src="https://ice1.somafm.com/lush-128-mp3" type="audio/mpeg">
-              </amp-audio>
+              </amp-audio> -->
               <br>
             </div>
           </section>
